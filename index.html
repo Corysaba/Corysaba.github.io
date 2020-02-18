@@ -1,115 +1,236 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
-
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: Please add the following <FORM> element to your page.             -->
-    <!--  ----------------------------------------------------------------------  -->
-    
+<!DOCTYPE html>
+<html>
+  <head>
+      <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>Simple registration form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      }
+      body, div, h1, form, input, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #666;
+      }
+      h1 {
+      padding: 10px 0;
+      font-size: 32px;
+      font-weight: 300;
+      text-align: center;
+      }
+      p {
+      font-size: 12px;
+      }
+      hr {
+      color: #a9a9a9;
+      opacity: 0.3;
+      }
+      .main-block {
+      max-width: 340px; 
+      min-height: 460px; 
+      padding: 10px 0;
+      margin: auto;
+      border-radius: 5px; 
+      border: solid 1px #ccc;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      background: #ebebeb; 
+      }
+      form {
+      margin: 0 30px;
+      }
+      .account-type, .gender {
+      margin: 15px 0;
+      }
+      input[type=radio] {
+      display: none;
+      }
+      label#icon {
+      margin: 0;
+      border-radius: 5px 0 0 5px;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      padding-top: 4px;
+      margin-right: 20px;
+      text-indent: 30px;
+      overflow: visible;
+      cursor: pointer;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1c87c9;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 4px;
+      top: 8px;
+      left: 4px;
+      border: 3px solid #fff;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      input[type=text], input[type=password] {
+      width: calc(100% - 57px);
+      height: 36px;
+      margin: 13px 0 0 -5px;
+      padding-left: 10px; 
+      border-radius: 0 5px 5px 0;
+      border: solid 1px #cbc9c9; 
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #fff; 
+      }
+      input[type=password] {
+      margin-bottom: 15px;
+      }
+      #icon {
+      display: inline-block;
+      padding: 9.3px 15px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #1c87c9;
+      color: #fff;
+      text-align: center;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #26a9e0;
+      }
+    </style>
+  </head>
+  <body>
     <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
     
-    <input type=hidden name="oid" value="00D1m0000008lRs">
-    <input type=hidden name="retURL" value="http://bcito.org.nz">
-    
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-    <!--  these lines if you wish to test in debug mode.                          -->
-    <!--  <input type="hidden" name="debug" value=1>                              -->
-    <!--  <input type="hidden" name="debugEmail"                                  -->
-    <!--  value="cory.saba@bcito.org.nz.invalid">                                 -->
-    <!--  ----------------------------------------------------------------------  -->
-    
-    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-    
-    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-    
-    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-    
-    <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-    
-    <label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-    
-    Region:<select  id="00N1m000000ctLt" name="00N1m000000ctLt" title="Region"><option value="">--None--</option><option value="Northland">Northland</option>
-    <option value="North Auckland">North Auckland</option>
-    <option value="Central Auckland">Central Auckland</option>
-    <option value="South Auckland">South Auckland</option>
-    <option value="Thames/Coromandel">Thames/Coromandel</option>
-    <option value="Waikato/Hamilton">Waikato/Hamilton</option>
-    <option value="Waikato/Other">Waikato/Other</option>
-    <option value="BOP Tauranga/Rotorua">BOP Tauranga/Rotorua</option>
-    <option value="BOP Other">BOP Other</option>
-    <option value="Gisborne">Gisborne</option>
-    <option value="Taupo">Taupo</option>
-    <option value="Taranaki">Taranaki</option>
-    <option value="Manawatu/Wanganui">Manawatu/Wanganui</option>
-    <option value="Hawkes Bay">Hawkes Bay</option>
-    <option value="Wairarapa">Wairarapa</option>
-    <option value="Porirua/Kapiti Coast">Porirua/Kapiti Coast</option>
-    <option value="Hutt Valley">Hutt Valley</option>
-    <option value="Wellington City">Wellington City</option>
-    <option value="Marlborough">Marlborough</option>
-    <option value="Nelson">Nelson</option>
-    <option value="West Coast">West Coast</option>
-    <option value="North Canterbury">North Canterbury</option>
-    <option value="Christchurch City">Christchurch City</option>
-    <option value="South Canterbury">South Canterbury</option>
-    <option value="Dunedin">Dunedin</option>
-    <option value="Central Otago">Central Otago</option>
-    <option value="Southland">Southland</option>
-    </select><br>
-    
-    Industry:<select  id="00N1m000000ctLr" name="00N1m000000ctLr" title="Industry"><option value="">--None--</option><option value="None">None</option>
-    <option value="Aluminium Joinery">Aluminium Joinery</option>
-    <option value="Brick and Blocklaying">Brick and Blocklaying</option>
-    <option value="Carpentry">Carpentry</option>
-    <option value="Cement and Concrete">Cement and Concrete</option>
-    <option value="Competitive Manufacturing">Competitive Manufacturing</option>
-    <option value="Construction Management">Construction Management</option>
-    <option value="Floor and Wall Tiling">Floor and Wall Tiling</option>
-    <option value="Flooring">Flooring</option>
-    <option value="Foundations">Foundations</option>
-    <option value="Frame and Truss Manufacture">Frame and Truss Manufacture</option>
-    <option value="Glass and Glazing">Glass and Glazing</option>
-    <option value="Health, Safety and Injury Prevention">Health, Safety and Injury Prevention</option>
-    <option value="Interior Systems">Interior Systems</option>
-    <option value="Kitchen and Bathroom Design">Kitchen and Bathroom Design</option>
-    <option value="Masonry">Masonry</option>
-    <option value="Painting and Decorating">Painting and Decorating</option>
-    <option value="Proprietary Plaster Cladding Systems">Proprietary Plaster Cladding Systems</option>
-    <option value="Refractory Installation">Refractory Installation</option>
-    <option value="Scaffolding and Rigging">Scaffolding and Rigging</option>
-    <option value="Solid Plastering">Solid Plastering</option>
-    <option value="Stonemasonry">Stonemasonry</option>
-    <option value="Timber Joinery">Timber Joinery</option>
-    <option value="Other">Other</option>
-    </select><br>
-    
-    Work Experience:<select  id="00N1m000000ctLv" name="00N1m000000ctLv" title="Work Experience"><option value="">--None--</option><option value="No experience">No experience</option>
-    <option value="1-6 Months">1-6 Months</option>
-    <option value="7-12 Months">7-12 Months</option>
-    <option value="1-2 Years">1-2 Years</option>
-    <option value="2+ Years">2+ Years</option>
-    </select><br>
-    
-    Completed Gateway Student:<input  id="00N1m000000ctLn" name="00N1m000000ctLn" type="checkbox" value="1" /><br>
-    
-    Completed a Pre-Trade Course:<input  id="00N1m000000ctLo" name="00N1m000000ctLo" type="checkbox" value="1" /><br>
-    
-    Discontinued BCITO Trainee:<input  id="00N1m000000ctLp" name="00N1m000000ctLp" type="checkbox" value="1" /><br>
-    
-    Drivers Licence:<select  id="00N1m000000ctLq" name="00N1m000000ctLq" title="Drivers Licence"><option value="">--None--</option><option value="None">None</option>
-    <option value="Learners">Learners</option>
-    <option value="Restricted">Restricted</option>
-    <option value="Full">Full</option>
-    </select><br>
-    
-    Own Transport:<input  id="00N1m000000ctLs" name="00N1m000000ctLs" type="checkbox" value="1" /><br>
-    
-    <input type="submit" name="submit">
-    
-    </form>
-    
+        <input type=hidden name="oid" value="00D1m0000008lRs">
+        <input type=hidden name="retURL" value="http://bcito.org.nz">
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="cory.saba@bcito.org.nz.invalid">                                 -->
+        <!--  ----------------------------------------------------------------------  -->
+        
+        <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+        
+        <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+        
+        <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+        
+        <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+        
+        <label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+        
+        Region:<select  id="00N1m000000ctLt" name="00N1m000000ctLt" title="Region"><option value="">--None--</option><option value="Northland">Northland</option>
+        <option value="North Auckland">North Auckland</option>
+        <option value="Central Auckland">Central Auckland</option>
+        <option value="South Auckland">South Auckland</option>
+        <option value="Thames/Coromandel">Thames/Coromandel</option>
+        <option value="Waikato/Hamilton">Waikato/Hamilton</option>
+        <option value="Waikato/Other">Waikato/Other</option>
+        <option value="BOP Tauranga/Rotorua">BOP Tauranga/Rotorua</option>
+        <option value="BOP Other">BOP Other</option>
+        <option value="Gisborne">Gisborne</option>
+        <option value="Taupo">Taupo</option>
+        <option value="Taranaki">Taranaki</option>
+        <option value="Manawatu/Wanganui">Manawatu/Wanganui</option>
+        <option value="Hawkes Bay">Hawkes Bay</option>
+        <option value="Wairarapa">Wairarapa</option>
+        <option value="Porirua/Kapiti Coast">Porirua/Kapiti Coast</option>
+        <option value="Hutt Valley">Hutt Valley</option>
+        <option value="Wellington City">Wellington City</option>
+        <option value="Marlborough">Marlborough</option>
+        <option value="Nelson">Nelson</option>
+        <option value="West Coast">West Coast</option>
+        <option value="North Canterbury">North Canterbury</option>
+        <option value="Christchurch City">Christchurch City</option>
+        <option value="South Canterbury">South Canterbury</option>
+        <option value="Dunedin">Dunedin</option>
+        <option value="Central Otago">Central Otago</option>
+        <option value="Southland">Southland</option>
+        </select><br>
+        
+        Industry:<select  id="00N1m000000ctLr" name="00N1m000000ctLr" title="Industry"><option value="">--None--</option>
+        <option value="Aluminium Joinery">Aluminium Joinery</option>
+        <option value="Brick and Blocklaying">Brick and Blocklaying</option>
+        <option value="Carpentry">Carpentry</option>
+        <option value="Cement and Concrete">Cement and Concrete</option>
+        <option value="Competitive Manufacturing">Competitive Manufacturing</option>
+        <option value="Construction Management">Construction Management</option>
+        <option value="Floor and Wall Tiling">Floor and Wall Tiling</option>
+        <option value="Flooring">Flooring</option>
+        <option value="Foundations">Foundations</option>
+        <option value="Frame and Truss Manufacture">Frame and Truss Manufacture</option>
+        <option value="Glass and Glazing">Glass and Glazing</option>
+        <option value="Health, Safety and Injury Prevention">Health, Safety and Injury Prevention</option>
+        <option value="Interior Systems">Interior Systems</option>
+        <option value="Kitchen and Bathroom Design">Kitchen and Bathroom Design</option>
+        <option value="Masonry">Masonry</option>
+        <option value="Painting and Decorating">Painting and Decorating</option>
+        <option value="Proprietary Plaster Cladding Systems">Proprietary Plaster Cladding Systems</option>
+        <option value="Refractory Installation">Refractory Installation</option>
+        <option value="Scaffolding and Rigging">Scaffolding and Rigging</option>
+        <option value="Solid Plastering">Solid Plastering</option>
+        <option value="Stonemasonry">Stonemasonry</option>
+        <option value="Timber Joinery">Timber Joinery</option>
+        <option value="Other">Other</option>
+        </select><br>
+        
+        Work Experience:<select  id="00N1m000000ctLv" name="00N1m000000ctLv" title="Work Experience"><option value="">--None--</option><option value="No experience">No experience</option>
+        <option value="1-6 Months">1-6 Months</option>
+        <option value="7-12 Months">7-12 Months</option>
+        <option value="1-2 Years">1-2 Years</option>
+        <option value="2+ Years">2+ Years</option>
+        </select><br>
+        
+        Completed Gateway Student:<input  id="00N1m000000ctLn" name="00N1m000000ctLn" type="checkbox" value="1" /><br>
+        
+        Completed a Pre-Trade Course:<input  id="00N1m000000ctLo" name="00N1m000000ctLo" type="checkbox" value="1" /><br>
+        
+        Discontinued BCITO Trainee:<input  id="00N1m000000ctLp" name="00N1m000000ctLp" type="checkbox" value="1" /><br>
+        
+        Drivers Licence:<select  id="00N1m000000ctLq" name="00N1m000000ctLq" title="Drivers Licence"><option value="">--None--</option><option value="None">None</option>
+        <option value="Learners">Learners</option>
+        <option value="Restricted">Restricted</option>
+        <option value="Full">Full</option>
+        </select><br>
+        
+        Own Transport:<input  id="00N1m000000ctLs" name="00N1m000000ctLs" type="checkbox" value="1" /><br>
+        
+        <input type="submit" name="submit">
+        
+        </form>
