@@ -1,24 +1,175 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-    <hr>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-</form>
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <div class="container">
+      <style>
+        body {
+          background:lightgrey;
+        }
+        
+        .content {
+          max-width: 500px;
+          margin: auto;
+          background: white;
+          padding: 10px;
+        }
+        h1{font-family:Arial Black;
+          color:royalblue;
+         }
+  
+         span {
+          font-family:Arial Black;
+           color:peru;
+         }
+  
+        
+        </style>
+      <div class="content">
+      <div style="clear: both">
+  
+  
+      <h1>Starter Job <span>Matching</span></h1>
+      </div>
+      <br>
+      <div>
+        <p> Please fill in this form to Register interest in finding a Job.</p>
+        <hr>
+    </div>
+      </div>
+      <body>
+      <div class="content">
+  
+      <label for="first_name">First Name</label>
+      <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+      <br>
+  
+      <label for="last_name">Last Name</label>
+      <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+      <br>
+  
+      <label for="email">Email</label>
+      <input  id="email" maxlength="80" name="email" size="20" type="text" />
+      <br>
+  
+      <label for="phone">Phone</label>
+      <input  id="phone" maxlength="40" name="phone" size="20" type="text" />
+      <br>
+  
+      <label for="mobile">Mobile</label>
+      <input  id="mobile" maxlength="40" name="mobile" size="20" type="text" />
+      <br>
+  
+      Region:<select  id="00N1m000000ctLt" name="00N1m000000ctLt" title="Region">
+        <option value="">--None--</option>
+        <option value="Northland">Northland</option>
+        <option value="North Auckland">North Auckland</option>
+        <option value="Central Auckland">Central Auckland</option>
+        <option value="South Auckland">South Auckland</option>
+        <option value="Thames/Coromandel">Thames/Coromandel</option>
+        <option value="Waikato/Hamilton">Waikato/Hamilton</option>
+        <option value="Waikato/Other">Waikato/Other</option>
+        <option value="BOP Tauranga/Rotorua">BOP Tauranga/Rotorua</option>
+        <option value="BOP Other">BOP Other</option>
+        <option value="Gisborne">Gisborne</option>
+        <option value="Taupo">Taupo</option>
+        <option value="Taranaki">Taranaki</option>
+        <option value="Manawatu/Wanganui">Manawatu/Wanganui</option>
+        <option value="Hawkes Bay">Hawkes Bay</option>
+        <option value="Wairarapa">Wairarapa</option>
+        <option value="Porirua/Kapiti Coast">Porirua/Kapiti Coast</option>
+        <option value="Hutt Valley">Hutt Valley</option>
+        <option value="Wellington City">Wellington City</option>
+        <option value="Marlborough">Marlborough</option>
+        <option value="Nelson">Nelson</option>
+        <option value="West Coast">West Coast</option>
+        <option value="North Canterbury">North Canterbury</option>
+        <option value="Christchurch City">Christchurch City</option>
+        <option value="South Canterbury">South Canterbury</option>
+        <option value="Dunedin">Dunedin</option>
+        <option value="Central Otago">Central Otago</option>
+        <option value="Southland">Southland</option>
+        </select>
+        <br>
+  
+        Work Experience:<select  id="00N1m000000ctLv" name="00N1m000000ctLv" title="Work Experience">
+          <option value="">--None--</option>
+          <option value="No experience">No experience</option>
+          <option value="1-6 Months">1-6 Months</option>
+          <option value="7-12 Months">7-12 Months</option>
+          <option value="1-2 Years">1-2 Years</option>
+          <option value="2+ Years">2+ Years</option>
+          </select>
+          <br>
+  
+          Completed Gateway Student:<input  id="00N1m000000ctLn" name="00N1m000000ctLn" type="checkbox" value="1" />
+          <br>
+  
+        Industry:<select  id="00N1m000000ctLr" name="00N1m000000ctLr" title="Industry">
+          <option value="">--None--</option>
+          <option value="Aluminium Joinery">Aluminium Joinery</option>
+          <option value="Brick and Blocklaying">Brick and Blocklaying</option>
+          <option value="Carpentry">Carpentry</option>
+          <option value="Cement and Concrete">Cement and Concrete</option>
+          <option value="Competitive Manufacturing">Competitive Manufacturing</option>
+          <option value="Construction Management">Construction Management</option>
+          <option value="Floor and Wall Tiling">Floor and Wall Tiling</option>
+          <option value="Flooring">Flooring</option>
+          <option value="Foundations">Foundations</option>
+          <option value="Frame and Truss Manufacture">Frame and Truss Manufacture</option>
+          <option value="Glass and Glazing">Glass and Glazing</option>
+          <option value="Health, Safety and Injury Prevention">Health, Safety and Injury Prevention</option>
+          <option value="Interior Systems">Interior Systems</option>
+          <option value="Kitchen and Bathroom Design">Kitchen and Bathroom Design</option>
+          <option value="Masonry">Masonry</option>
+          <option value="Painting and Decorating">Painting and Decorating</option>
+          <option value="Proprietary Plaster Cladding Systems">Proprietary Plaster Cladding Systems</option>
+          <option value="Refractory Installation">Refractory Installation</option>
+          <option value="Scaffolding and Rigging">Scaffolding and Rigging</option>
+          <option value="Solid Plastering">Solid Plastering</option>
+          <option value="Stonemasonry">Stonemasonry</option>
+          <option value="Timber Joinery">Timber Joinery</option>
+          <option value="Other">Other</option>
+          </select>
+          <br>
+  
+          Work Experience:<select  id="00N1m000000ctLv" name="00N1m000000ctLv" title="Work Experience">
+            <option value="">--None--</option>
+            <option value="No experience">No experience</option>
+            <option value="1-6 Months">1-6 Months</option>
+            <option value="7-12 Months">7-12 Months</option>
+            <option value="1-2 Years">1-2 Years</option>
+            <option value="2+ Years">2+ Years</option>
+            </select>
+            <br>
+            
+            Completed Gateway Student:<input  id="00N1m000000ctLn" name="00N1m000000ctLn" type="checkbox" value="1" />
+            <br>
+            
+            Completed a Pre-Trade Course:<input  id="00N1m000000ctLo" name="00N1m000000ctLo" type="checkbox" value="1" />
+            <br>
+            
+            Discontinued BCITO Trainee:<input  id="00N1m000000ctLp" name="00N1m000000ctLp" type="checkbox" value="1" />
+            <br>
+            
+            Drivers Licence:<select  id="00N1m000000ctLq" name="00N1m000000ctLq" title="Drivers Licence">
+              <option value="">--None--</option>
+              <option value="None">None</option>
+            <option value="Learners">Learners</option>
+            <option value="Restricted">Restricted</option>
+            <option value="Full">Full</option>
+            </select>
+            <br>
+            
+            Own Transport:<input  id="00N1m000000ctLs" name="00N1m000000ctLs" type="checkbox" value="1" />
+            <br>
+      </div>
+            </body>
+  
+            <div class="content">
+                      <input type="submit" name="submit">
+            
+  
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="https://bcito.org.nz/terms-and-conditions/">Terms & Privacy</a>.</p>
+            </div>
+    </div>
+  </form>
